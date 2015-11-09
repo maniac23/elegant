@@ -577,6 +577,48 @@ footer {
 .ab_footer {
     background-color: #eeeeee;
 }
-.blog-intro{
+
+.blog-intro {
     background: url(../img/tumblr_nau9zqjZay1tubinno1_1280.jpg) no-repeat center center /cover;
+    height: 400px;
+}
+
+.blog-main-content {
+    margin: 80px 70px;
+    background-color: #f9f9f9;
+    padding: 60px;
+}
+
+.blog-item {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 55px;
+}
+
+.blog-item img {
+    max-width: 100%;
+    margin-bottom: 35px;
+}
+
+.blog-item h2 {
+    font-family: "OpenSansLight", sans-serif;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.blog-item h6 {
+    font-family: "OpenSansLight", sans-serif;
+    font-size: 15px;
+    text-transform: none;
+    margin-bottom: 35px;
+}
+
+.blog-item p {
+    font-size: 16px;
+    margin-bottom: 70px;
+}
+
+.blog-item .btn {
+    margin: 0;
+    text-align: center;
 }
