@@ -12,6 +12,9 @@
         padding-top: 135px;
         padding-bottom: 171px;
     }
+    .blog-menu-item a img {
+        max-width: 100%;
+    }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -37,6 +40,18 @@
     }
     .services_descr {
         padding: 39px 50px 34px;
+    }
+    .blog-item {
+        margin-right: 50px;
+    }
+    .blog-menu-item h2 {
+        max-width: 200px;
+    }
+    .blog-menu-item a img {
+        max-width: 70%;
+    }
+    main .row {
+        margin: 0;
     }
 }
 
@@ -107,6 +122,9 @@
     }
     .services_descr {
         max-width: 674px;
+    }
+    .ab-footer {
+        padding: 0px 50px;
     }
 }
 
@@ -202,12 +220,34 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+    .blog-main-content {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
+    .blog-menu-item a img {
+        max-width: 100%;
+    }
+    .blog-main-content .container {
+        padding: 0;
+    }
+    .blog-item {
+        padding: 60px 0;
+        margin-right: 0;
+    }
 }
 
 
 /* Custom, iPhone Retina */
 
-@media only screen and (max-width: 320px) {}
+@media only screen and (max-width: 320px) {
+    main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
 
 
 /*==========  Mobile First Method  ==========*/

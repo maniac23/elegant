@@ -589,6 +589,11 @@ footer {
     padding: 60px;
 }
 
+.posts {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .blog-item {
     background-color: #fff;
     padding: 30px;
@@ -620,5 +625,45 @@ footer {
 
 .blog-item .btn {
     margin: 0;
+    text-align: center;
+}
+
+.blog-menu {
+    padding: 0 50px;
+}
+
+.blog-menu-item h2 {
+    font-family: "OpenSansLight", sans-serif;
+    font-size: 30px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #d3b000;
+    max-width: 300px;
+    padding-bottom: 15px;
+}
+
+.blog-menu-item ul a {
+    font-family: "OpenSansLightItalic", sans-serif;
+    font-size: 16px;
+    color: rgba(2, 23, 37, 0.7);
+    line-height: 1.7;
+}
+
+.blog-menu-item {
+    margin-bottom: 65px;
+}
+
+.blog-menu-item a img {
+    max-width: 100%;
+    margin-bottom: 5px;
+    opacity: 1;
+    transition: all 0.4s ease-in-out 0.3s;
+}
+
+.blog-menu-item a img:hover {
+    transition-delay: 0s;
+    opacity: .7;
+}
+
+.blog-more .btn {
     text-align: center;
 }
