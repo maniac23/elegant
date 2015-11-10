@@ -126,6 +126,15 @@
     .ab-footer {
         padding: 0px 50px;
     }
+    .project-img a img {
+        max-width: 100%;
+    }
+    .container {
+        width: auto;
+    }
+    .project-txt img {
+        max-width: 100%;
+    }
 }
 
 
@@ -236,6 +245,9 @@
     .blog-item {
         padding: 60px 0;
         margin-right: 0;
+    }
+    .posts {
+        text-align: center;
     }
 }
 
