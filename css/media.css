@@ -135,6 +135,9 @@
     .project-txt img {
         max-width: 100%;
     }
+    .work-portfolio p {
+        padding: 0px 150px 130px;
+    }
 }
 
 
@@ -175,6 +178,9 @@
         padding-left: 100px;
         padding-right: 100px;
         margin-bottom: 50px;
+    }
+    .work-portfolio p {
+        padding: 0px 100px 130px;
     }
 }
 
@@ -248,6 +254,9 @@
     }
     .posts {
         text-align: center;
+    }
+    .work-portfolio p {
+        padding: 0px 40px 130px;
     }
 }
 
