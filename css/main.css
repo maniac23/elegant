@@ -712,3 +712,91 @@ footer {
 .work-portfolio p {
     padding: 0px 240px 130px;
 }
+
+.contacts-intro {
+    background: url(../img/cd-content-contact-bg_img.jpg) no-repeat center center /cover;
+    max-height: 400px;
+}
+
+.contacts-container {
+    width: 90%;
+    max-width: 768px;
+    margin: 5rem auto;
+}
+
+.contacts-content h1 {
+    font-family: "OpenSansBold", sans-serif;
+    font-weight: bold;
+    margin-bottom: 90px;
+}
+
+.contacts-content h2 {
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 25px;
+    color: #fff;
+}
+
+.col-one {
+    padding: 30px 85px 165px 30px;
+    height: 300px;
+    background-color: #D4AF37;
+    display: inline-block;
+    width: 39.4%;
+}
+
+.col-one hr {
+    margin-left: 0;
+    margin-top: 2rem;
+    width: 30px;
+    height: 4px;
+    background-color: #FFF;
+}
+
+.col-one h2 {
+    text-align: left;
+}
+
+.col-two {
+    vertical-align: top;
+    width: 60%;
+    height: 300px;
+    background-image: url(../img/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg);
+    background-size: cover;
+    display: inline-block;
+}
+
+.col-three {
+    vertical-align: top;
+    width: 60%;
+    height: 300px;
+    display: inline-block;
+    background-color: #F9F9F9;
+}
+
+.col-three p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 2em 0px;
+}
+
+.col-four {
+    width: 39.4%;
+    height: 300px;
+    background-color: #212121;
+    display: inline-block;
+    margin-bottom: 75px;
+}
+
+.col-four hr {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    width: 2rem;
+    height: 4px;
+    background-color: #FFF;
+}
+
+.col-four h2 {
+    color: #FFF;
+    line-height: 1.2;
+    padding: 2rem;
+}

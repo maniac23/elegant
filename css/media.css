@@ -258,6 +258,12 @@
     .work-portfolio p {
         padding: 0px 40px 130px;
     }
+    .col-one,
+    .col-two,
+    .col-three,
+    .col-four {
+        width: 100%;
+    }
 }
 
 
