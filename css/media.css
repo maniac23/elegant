@@ -3,7 +3,7 @@
 
 /* Large Devices, Wide Screens */
 
-@media only screen and (min-width: 1900px) {
+@media only screen and (max-width: 1900px) {
     .descr {
         padding-top: 210px;
         padding-bottom: 217px;

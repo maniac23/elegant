@@ -1,93 +1,66 @@
 *,
 *:after,
 *:before {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
-
 body {
     font-size: 100%;
     font-family: "Source Sans Pro", sans-serif;
     color: rgba(2, 23, 37, 0.7);
-    background-color: #fff;
+    background-color: #fff
 }
-
 body.overflow-hidden {
-    /* when primary navigation is visible, the content in the background won't scroll */
-    overflow: hidden;
+    overflow: hidden
 }
-
 a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none
 }
-
 h1 {
     font-family: "OpenSansSemibold", sans-serif;
     font-size: 44px;
     color: rgba(2, 23, 37, 0.7);
     text-transform: capitalize;
-    margin-top: 0;
+    margin-top: 0
 }
-
 h6 {
     color: #d4af37;
     font-size: 13px;
     font-family: "OpenSansSemibold", sans-serif;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 400
 }
-
 p {
     font-family: "OpenSansLight", sans-serif;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.6
 }
-
-
-/* -------------------------------- 
-
-Modules - reusable parts of our design
-
--------------------------------- */
-
 .cd-container {
-    /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
     width: 90%;
     max-width: 768px;
-    margin: 0 auto;
+    margin: 0 auto
 }
-
 .cd-container::after {
     clear: both;
     content: "";
-    display: table;
+    display: table
 }
-
-
-/* -------------------------------- 
-
-Main components 
-
--------------------------------- */
-
 html,
 body {
-    height: 100%;
+    height: 100%
 }
-
 .cd-header {
     position: absolute;
     top: 0;
     left: 0;
-    background: #2D3035;
+    background: #2d3035;
     height: 50px;
     width: 100%;
     z-index: 3;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale
 }
-
 .cd-logo {
     display: block;
     position: absolute;
@@ -96,34 +69,28 @@ body {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    left: .875em;
+    left: .875em
 }
-
 .cd-logo img {
-    display: block;
+    display: block
 }
-
 .cd-primary-nav-trigger {
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
     width: 50px;
-    background-color: #03263d;
+    background-color: #03263d
 }
-
 .cd-primary-nav-trigger .cd-menu-text {
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
     font-family: "OpenSansSemiBold", sans-serif;
     font-size: 16px;
-    /* hide the text on small devices */
-    display: none;
+    display: none
 }
-
 .cd-primary-nav-trigger .cd-menu-icon {
-    /* this span is the central line of the menu icon */
     display: inline-block;
     position: absolute;
     left: 50%;
@@ -136,11 +103,9 @@ body {
     width: 18px;
     height: 2px;
     background-color: #fff;
-    -webkit-transition: background-color 0.3s;
-    transition: background-color 0.3s;
-    /* these are the upper and lower lines in the menu icon */
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s
 }
-
 .cd-primary-nav-trigger .cd-menu-icon::before,
 .cd-primary-nav-trigger .cd-menu-icon:after {
     content: '';
@@ -149,66 +114,56 @@ body {
     position: absolute;
     background-color: #fff;
     right: 0;
-    -webkit-transition: -webkit-transform 0.3s, top 0.3s, background-color 0s;
-    transition: transform 0.3s, top 0.3s, background-color 0s;
+    -webkit-transition: -webkit-transform .3s, top .3s, background-color 0;
+    transition: transform .3s, top .3s, background-color 0
 }
-
 .cd-primary-nav-trigger .cd-menu-icon::before {
-    top: -5px;
+    top: -5px
 }
-
 .cd-primary-nav-trigger .cd-menu-icon::after {
-    top: 5px;
+    top: 5px
 }
-
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0)
 }
-
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before,
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
-    background-color: white;
+    background-color: white
 }
-
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::before {
     top: 0;
     -webkit-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
-    transform: rotate(135deg);
+    transform: rotate(135deg)
 }
-
 .cd-primary-nav-trigger .cd-menu-icon.is-clicked::after {
     top: 0;
     -webkit-transform: rotate(225deg);
     -ms-transform: rotate(225deg);
-    transform: rotate(225deg);
+    transform: rotate(225deg)
 }
-
 .cd-primary-nav {
-    /* by default it's hidden - on top of the viewport */
     position: fixed;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
-    background: #2D3035;
+    background: #2d3035;
     z-index: 2;
     text-align: center;
     padding: 50px 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: auto;
-    /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     transform: translateY(-100%);
     -webkit-transition-property: -webkit-transform;
     transition-property: transform;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s
 }
-
 .cd-primary-nav li {
     font-size: 22px;
     font-size: 1.375rem;
@@ -216,82 +171,69 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: .2em 0;
-    text-transform: capitalize;
+    text-transform: capitalize
 }
-
 .cd-primary-nav a {
     display: inline-block;
-    padding: 0.4em 1em;
-    border-radius: 0.25em;
-    -webkit-transition: background 0.2s;
-    transition: background 0.2s;
-    color: #D4AF37;
+    padding: .4em 1em;
+    border-radius: .25em;
+    -webkit-transition: background .2s;
+    transition: background .2s;
+    color: #d4af37;
     font-family: "OpenSansLight", sans-serif;
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 300
 }
-
 .no-touch .cd-primary-nav a:hover {
     font-weight: 700;
-    text-decoration: none;
+    text-decoration: none
 }
-
 .cd-primary-nav .cd-label {
     color: #fff;
     text-transform: uppercase;
     font-family: "OpenSans", sans-serif;
     font-weight: 700;
     font-size: 16px;
-    margin: 2.4em 0 0.8em;
+    margin: 2.4em 0 .8em
 }
-
 .cd-primary-nav .cd-social {
     display: inline-block;
-    margin: 0 0.4em;
+    margin: 0 .4em
 }
-
 .cd-primary-nav .cd-social a {
     width: 44px;
     height: 44px;
     padding: 0;
     background-image: url("../img/cd-socials.svg");
     background-repeat: no-repeat;
-    /* image replacement */
     overflow: hidden;
     text-indent: 100%;
-    white-space: nowrap;
+    white-space: nowrap
 }
-
 .cd-primary-nav .cd-facebook a {
-    background-position: 0 0;
+    background-position: 0 0
 }
-
 .cd-primary-nav .cd-instagram a {
-    background-position: -44px 0;
+    background-position: -44px 0
 }
-
 .cd-primary-nav .cd-dribbble a {
-    background-position: -88px 0;
+    background-position: -88px 0
 }
-
 .cd-primary-nav .cd-twitter a {
-    background-position: -132px 0;
+    background-position: -132px 0
 }
-
 .cd-primary-nav.is-visible {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
-    transform: translateY(0);
+    transform: translateY(0)
 }
-
 .cd-intro {
     position: relative;
     width: 100%;
     height: 680px;
     background: url(../img/cd-intro-bg.jpg) no-repeat center center / cover;
-    z-index: 1;
+    z-index: 1
 }
-
 .cd-intro h1 {
     position: absolute;
     width: 90%;
@@ -307,33 +249,27 @@ body {
     color: #fff;
     font-family: "OpenSansLight", sans-serif;
     font-size: 64px;
-    text-align: center;
+    text-align: center
 }
-
 .cd-intro h1 i {
-    font-style: italic;
+    font-style: italic
 }
-
 .content {
     text-align: center;
-    padding-top: 80px;
+    padding-top: 80px
 }
-
 .about {
     padding-bottom: 160px;
     padding-left: 258px;
-    padding-right: 258px;
+    padding-right: 258px
 }
-
 .about h6 {
     display: inline-block;
-    margin-top: 14px;
+    margin-top: 14px
 }
-
 .about p {
-    margin-bottom: 50px;
+    margin-bottom: 50px
 }
-
 .btn {
     display: block;
     border: 1px solid rgba(2, 23, 37, 0.7);
@@ -344,187 +280,154 @@ body {
     font-family: "OpenSansLight", sans-serif;
     font-size: 14px;
     text-decoration: none;
-    margin: auto;
+    margin: auto
 }
-
 .btn:hover {
     color: #d4af37;
     border-color: #d4af37;
-    text-decoration: none;
+    text-decoration: none
 }
-
 .portfolio {
-    padding-bottom: 160px;
+    padding-bottom: 160px
 }
-
 .portfolio h1 {
-    margin-bottom: 80px;
+    margin-bottom: 80px
 }
-
 .portfolio a img {
     transition: all 0.4s ease-in-out 0.3s;
     transform: scale(1)
 }
-
 .portfolio a img:hover {
     transform: scale(1.3);
-    transition-delay: 0s;
+    transition-delay: 0;
 }
-
 .team {
     padding-left: 258px;
     padding-right: 258px;
-    padding-bottom: 160px;
+    padding-bottom: 160px
 }
-
 .team p {
-    margin-bottom: 50px;
+    margin-bottom: 50px
 }
-
 .people {
     display: block;
-    margin: auto;
+    margin: auto
 }
-
 .people .row {
-    margin: 0;
+    margin: 0
 }
-
 .people h6 {
     font-family: "OpenSansSemiBold", sans-serif;
     font-size: 13px;
     text-align: left;
     font-weight: 700;
-    padding: 18px 10px;
+    padding: 18px 10px
 }
-
 .people h4 {
     font-family: "OpenSansRegular", sans-serif;
     font-size: 21px;
     color: rgba(2, 23, 37, 0.7);
-    padding-bottom: 35px;
+    padding-bottom: 35px
 }
-
 .people .people-item {
-    background-color: #F9F9F9;
+    background-color: #f9f9f9;
     padding: 0;
     margin-right: 8px;
-    width: 32%;
+    width: 32%
 }
-
 .people .people-item img {
-    width: 100%;
+    width: 100%
 }
-
 .people p {
     font-size: 14px;
     padding: 0 25px 45px 25px;
-    text-align: left;
+    text-align: left
 }
-
 .blog {
     padding-left: 258px;
     padding-right: 258px;
-    padding-bottom: 160px;
+    padding-bottom: 160px
 }
-
 .blog img {
-    width: 100%;
+    width: 100%
 }
-
 .descr {
-    background-color: #F9F9F9;
+    background-color: #f9f9f9;
     width: 50%;
     margin: 0;
-    padding: 40px;
+    padding: 40px
 }
-
 .descr .date {
     font-family: "OpenSansRegular", sans-serif;
     font-size: 14px;
     font-weight: 400;
     text-align: left;
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
-
 .descr p {
     text-align: left;
-    margin-bottom: 53px;
+    margin-bottom: 53px
 }
-
 .descr h2 {
     font-family: "OpenSansRegular", sans-serif;
     font-size: 30px;
     text-align: left;
-    margin-bottom: 35px;
+    margin-bottom: 35px
 }
-
 .descr .btn {
     text-align: left;
     width: 125px;
     height: 50px;
-    margin: 0;
+    margin: 0
 }
-
 .blog-pic {
-    padding-right: 0;
+    padding-right: 0
 }
-
 .more {
     text-transform: capitalize;
-    margin-top: 80px;
+    margin-top: 80px
 }
-
 .contacts {
     padding: 0 256px;
-    margin-bottom: 77px;
+    margin-bottom: 77px
 }
-
 .map img {
-    width: 100%;
+    width: 100%
 }
-
 .contacts .row h6 {
     color: rgba(2, 23, 37, 0.7);
-    margin-bottom: 50px;
+    margin-bottom: 50px
 }
-
 .contacs p {
-    font-size: 19px;
+    font-size: 19px
 }
-
 .contacts .row {
     background-color: #f9f9f9;
-    margin: 0;
+    margin: 0
 }
-
 .contacts_item {
-    padding: 50px 70px;
+    padding: 50px 70px
 }
-
 footer {
     background-color: #f9f9f9;
-    padding: 20px 252px 40px;
+    padding: 20px 252px 40px
 }
-
 .f_dev {
-    float: left;
+    float: left
 }
-
 .f_email {
-    float: right;
+    float: right
 }
-
 .about-intro {
-    background: url(../img/SW_CalebMorris1.jpg) no-repeat center center /cover;
+    background: url(../img/SW_CalebMorris1.jpg) no-repeat center center /cover
 }
-.about-intro h1{
-      bottom: auto;
+.about-intro h1 {
+    bottom: auto;
     color: #2d2d2d;
     font-size: 3em;
     font-weight: 300;
     left: 50%;
-    letter-spacing: 0.05em;
+    letter-spacing: .05em;
     line-height: 1.5em;
     max-width: 1170px;
     position: absolute;
@@ -532,167 +435,138 @@ footer {
     text-align: center;
     top: 90%;
     transform: translateX(-50%) translateY(-50%);
-    width: 70%;
+    width: 70%
 }
-
 .ab_content {
-    padding: 160px 260px;
+    padding: 160px 260px
 }
-
 .services_img img {
     width: 50%;
     height: 450px;
     max-width: 677px;
-    float: left;
+    float: left
 }
-
 .services_descr {
     width: 50%;
     max-width: 670px;
     height: 450px;
     float: right;
-    background-color: #F9F9F9;
-    padding: 50px;
+    background-color: #f9f9f9;
+    padding: 50px
 }
-
 .services_descr h1 {
     margin-bottom: 90px;
-    text-align: left;
+    text-align: left
 }
-
-
-/* чтобы футер был в нормальном потоке */
-
 .services_wrap::after {
     content: ".";
     display: block;
     height: 0;
     clear: both;
-    visibility: hidden;
+    visibility: hidden
 }
-
 .descr_txt {
     width: 45%;
     float: left;
-    text-align: left;
+    text-align: left
 }
-
 .descr_list {
     width: 45%;
     float: right;
-    text-align: left;
+    text-align: left
 }
-
 .descr_list li {
     font-size: 18px;
-    font-family: "OpenSansLight", sans-serif;
+    font-family: "OpenSansLight", sans-serif
 }
-
 .ab_footer {
-    background-color: #eeeeee;
+    background-color: #eee
 }
-
 .blog-intro {
     background: url(../img/tumblr_nau9zqjZay1tubinno1_1280.jpg) no-repeat center center /cover;
-    height: 400px;
+    height: 400px
 }
-
 .blog-main-content {
     margin: 80px 70px;
     background-color: #f9f9f9;
-    padding: 60px;
+    padding: 60px
 }
-
 .posts {
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 0
 }
-
 .blog-item {
     background-color: #fff;
     padding: 30px;
-    margin-bottom: 55px;
+    margin-bottom: 55px
 }
-
 .blog-item img {
     max-width: 100%;
-    margin-bottom: 35px;
+    margin-bottom: 35px
 }
-
 .blog-item h2 {
     font-family: "OpenSansLight", sans-serif;
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
-
 .blog-item h6 {
     font-family: "OpenSansLight", sans-serif;
     font-size: 15px;
     text-transform: none;
-    margin-bottom: 35px;
+    margin-bottom: 35px
 }
-
 .blog-item p {
     font-size: 16px;
-    margin-bottom: 70px;
+    margin-bottom: 70px
 }
-
 .blog-item .btn {
     margin: 0;
-    text-align: center;
+    text-align: center
 }
-
 .blog-menu {
-    padding: 0 50px;
+    padding: 0 50px
 }
-
 .blog-menu-item h2 {
     font-family: "OpenSansLight", sans-serif;
     font-size: 30px;
     margin-bottom: 40px;
     border-bottom: 3px solid #d3b000;
     max-width: 300px;
-    padding-bottom: 15px;
+    padding-bottom: 15px
 }
-
 .blog-menu-item ul a {
     font-family: "OpenSansLightItalic", sans-serif;
     font-size: 16px;
     color: rgba(2, 23, 37, 0.7);
-    line-height: 1.7;
+    line-height: 1.7
 }
-
 .blog-menu-item {
-    margin-bottom: 65px;
+    margin-bottom: 65px
 }
-
 .blog-menu-item a img {
     max-width: 90%;
     margin-bottom: 5px;
     opacity: 1;
-    transition: all 0.4s ease-in-out 0.3s;
+    transition: all .4s ease-in-out .3s
 }
-
 .blog-menu-item a img:hover {
-    transition-delay: 0s;
-    opacity: .7;
+    transition-delay: 0;
+    opacity: .7
 }
-
 .blog-more .btn {
-    text-align: center;
+    text-align: center
 }
-
 .project-intro {
     background: url(../img/heydays_nora04-1440x900.jpg) no-repeat center center /cover;
-    max-height: 680px;
+    max-height: 680px
 }
-.project-intro h1{
-     bottom: auto;
+.project-intro h1 {
+    bottom: auto;
     color: #2d2d2d;
     font-size: 3em;
     font-weight: 300;
     left: 50%;
-    letter-spacing: 0.05em;
+    letter-spacing: .05em;
     line-height: 1.5em;
     max-width: 1170px;
     position: absolute;
@@ -700,133 +574,112 @@ footer {
     text-align: center;
     top: 90%;
     transform: translateX(-50%) translateY(-50%);
-    width: 70%;
+    width: 70%
 }
-
 .project-txt h1 {
     font-family: "OpenSansBold", sans-serif;
     font-size: 45px;
-    margin-bottom: 120px;
+    margin-bottom: 120px
 }
-
 .project-txt p {
     font-size: 18px;
     margin-bottom: 150px;
-    padding-right: 20px;
+    padding-right: 20px
 }
-
 .project-txt p span {
-    font-weight: bold;
+    font-weight: bold
 }
-
 .project-txt img {
     max-width: 90%;
     max-height: 90%;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
-
 .project-social {
-    margin-bottom: 50px;
+    margin-bottom: 50px
 }
-
 .project-social a {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px
 }
-
 .work-intro {
     background: url(../img/projects-bg_img.gif) no-repeat center center /cover;
-    height: 400px;
+    height: 400px
 }
-
 .work-portfolio p {
-    padding: 0px 240px 130px;
+    padding: 0 240px 130px
 }
-
 .contacts-intro {
     background: url(../img/cd-content-contact-bg_img.jpg) no-repeat center center /cover;
-    height: 400px;
+    height: 400px
 }
-
 .contacts-container {
     width: 90%;
     max-width: 768px;
-    margin: 5rem auto;
+    margin: 5rem auto
 }
-
 .contacts-content h1 {
     font-family: "OpenSansBold", sans-serif;
     font-weight: bold;
-    margin-bottom: 90px;
+    margin-bottom: 90px
 }
-
 .contacts-content h2 {
     font-family: "OpenSansRegular", sans-serif;
     font-size: 25px;
-    color: #fff;
+    color: #fff
 }
-
 .col-one {
     padding: 30px 85px 165px 30px;
     height: 300px;
-    background-color: #D4AF37;
+    background-color: #d4af37;
     display: inline-block;
-    width: 39.4%;
+    width: 39.4%
 }
-
 .col-one hr {
     margin-left: 0;
     margin-top: 2rem;
     width: 30px;
     height: 4px;
-    background-color: #FFF;
+    background-color: #FFF
 }
-
 .col-one h2 {
-    text-align: left;
+    text-align: left
 }
-
 .col-two {
     vertical-align: top;
     width: 60%;
     height: 300px;
     background-image: url(../img/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg);
     background-size: cover;
-    display: inline-block;
+    display: inline-block
 }
-
 .col-three {
     vertical-align: top;
     width: 60%;
     height: 300px;
     display: inline-block;
-    background-color: #F9F9F9;
+    background-color: #f9f9f9
 }
-
 .col-three p {
     padding-left: 3rem;
     padding-right: 3rem;
-    margin: 2em 0px;
+    margin: 2em 0
 }
-
 .col-four {
     width: 39.4%;
     height: 300px;
     background-color: #212121;
     display: inline-block;
-    margin-bottom: 75px;
+    margin-bottom: 75px
 }
-
 .col-four hr {
     margin-left: 2rem;
     margin-top: 2rem;
     width: 2rem;
     height: 4px;
-    background-color: #FFF;
+    background-color: #FFF
 }
-
 .col-four h2 {
     color: #FFF;
     line-height: 1.2;
-    padding: 2rem;
+    padding: 2rem
 }
